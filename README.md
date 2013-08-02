@@ -33,17 +33,22 @@ generation takes too long (the key will be cryptographically less random though)
 * Extract/move/copy content htdocs to desired place that is accessible from web.
 * Set required parameters in the config.php file (includes username, password and hostname).
 * Execute following commands in dyndns directory (htdocs):
- ```
-chown root:www-data config.php .htaccess update.php data
-chmod 440 .htaccess
-chmod 640 config.php update.php
-chmod 770 data
-chown root:root updateNs.php
-chmod 400 updateNs.php
- ```
+
+> chown root:www-data config.php .htaccess update.php data
+
+> chmod 440 .htaccess
+
+> chmod 640 config.php update.php
+
+> chmod 770 data
+
+> chown root:root updateNs.php
+
+> chmod 400 updateNs.php
+
 * Setup root cron to run updateNs.php for example every 15 minutes.
 
-4. Notes
+### 4. Notes
 
 .htaccess file is only necessary if PHP is running on FastCGI, not as Apache module.
 Otherwise HTTP authentication variables aren't accessible.
