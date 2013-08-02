@@ -1,6 +1,6 @@
 Very Simple DynamicNS v0.1a
 =======
-Kristjan Kaitsa
+Author: Kristjan Kaitsa
 
 ### 1. Description
 Very simple script (one night code) for management of hostnames with dynamic IP-address.
