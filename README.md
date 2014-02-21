@@ -34,7 +34,7 @@ Apache, PHP and Bind9 should be already configured.
 generation takes too long (the key will be cryptographically less random though).
 * Protect generated keys with chmod 400.
 * Copy key from generated .private file to your named.conf (example included).
-* Extract/move/copy content htdocs to desired place that is accessible from web.
+* Extract/move/copy content of htdocs to desired place that is accessible from web.
 * Set required parameters in the config.php file (includes username, password and hostname).
 * Execute following commands in dyndns directory (htdocs):
 
@@ -45,6 +45,14 @@ generation takes too long (the key will be cryptographically less random though)
 > chmod 640 config.php update.php
 
 > chmod 770 data
+
+* Extract/move/copy content of cron directory to desired place (better not to be accessible
+from web).
+* Set required parameter(s) in the updateNs.php file (PATH_HTDOCS should point to the directory,
+where you put the files from htdocs).
+
+* Execute following commands in the directory where you placed an updateNs.php file
+from the cron directory:
 
 > chown root:root updateNs.php
 
