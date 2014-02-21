@@ -16,9 +16,9 @@ PHP Flatfile package is used: http://lukeplant.me.uk/resources/flatfile/
 
 Requires web server with php installed and configured (for example apache2 + php5-cgi),
 bind9 name server with bind9utils (necessary for doing dynamic updates with nsupdate).
+You should have some knowledge about Linux, nameservers etc.
 
 Tested in the following environment:
-* Some knowledge about Linux, nameservers etc.
 * Linux Debian 6.0.7 "squueze"
 * Apache/2.2.16 (Debian) mod_ssl/2.2.16 OpenSSL/0.9.8o mod_fcgid/2.3.6
 * PHP Version 5.3.3-7+squeeze15 (API: FastCGI)
