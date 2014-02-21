@@ -6,6 +6,10 @@ Author: Kristjan Kaitsa
 Very simple script (one night code) for management of hostnames with dynamic IP-address.
 Meant to work with embed routers such as Thomson TG784.
 
+__Clarification__: _Not meant to be hosted on such routers, but you can set their software_
+_(e.g. Dynamic DNS Service) to query the script on your server and keep their hostnames up_
+_to date with right IP-addresses. No need for 3rd party services or complicated solutions._
+
 PHP Flatfile package is used: http://lukeplant.me.uk/resources/flatfile/
 
 ### 2. Requirements
