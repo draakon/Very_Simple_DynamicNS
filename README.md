@@ -9,6 +9,8 @@ Meant to work with embed routers such as Thomson TG784.
 __Clarification__: _Not meant to be hosted on such routers, but you can set their software_
 _(e.g. Dynamic DNS Service) to query the script on your server and keep their hostnames up_
 _to date with right IP-addresses. No need for 3rd party services or complicated solutions._
+_Also, 'Very Simple' doesn't mean that setting up is easy for user who isn't familar with_
+_Linux and its services! Rather that the application isn't with very advanced options._
 
 PHP Flatfile package is used: http://lukeplant.me.uk/resources/flatfile/
 
@@ -26,7 +28,10 @@ Tested in the following environment:
 * bind9utils 1:9.7.3.dfsg-1~squeeze9
 
 ### 3. Installation
-Apache, PHP and Bind9 should be already configured.
+Apache, PHP and Bind9 should be already configured. You may have to make some changes in
+the following commands or general instructions depending on your environment (for example
+replace www-data with the group that is used by your web server). This is more an example
+than real step-by-step instruction for every system.
 
 * Add new zone file for your dynamic domains (example in /bind directory)
 * Generate cryptographic key, example:
@@ -38,6 +43,8 @@ generation takes too long (the key will be cryptographically less random though)
 * Extract/move/copy content of htdocs to desired place that is accessible from web.
 * Set required parameters in the config.php file (includes username, password and hostname).
 * Execute following commands in dyndns directory (htdocs):
+
+> mkdir data
 
 > chown root:www-data config.php .htaccess update.php data
 
@@ -65,3 +72,4 @@ from the cron directory:
 
 .htaccess file is only necessary if PHP is running on FastCGI, not as Apache module.
 Otherwise HTTP authentication variables aren't accessible.
+
